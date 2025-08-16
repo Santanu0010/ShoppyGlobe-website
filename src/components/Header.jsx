@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 function Header() {
     return (
         <>
+            <div className="bg-red-500 text-l font-bold text-white h-8 text-center "  >
+                <h1>Welcome to Shopee Globe</h1>
+            </div>
             <header className="bg-white shadow-md">
                 <div className="container mx-auto flex items-center justify-between py-4 px-6">
                     

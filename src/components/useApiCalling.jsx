@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function ApiCalling(){
+function useApiCalling(){
 
     const [allItems , setAllItems] = useState([]);
 
@@ -10,9 +10,10 @@ function ApiCalling(){
             try{
                  const api = await fetch("https://dummyjson.com/products")
                 const resp= await api.json();
+                const data = await resp.products;
 
          
-                setAllItems(resp.products || []);
+                setAllItems(data);
 
             }
             catch(error){
@@ -27,4 +28,4 @@ function ApiCalling(){
     return allItems;
 
 }
-export default ApiCalling;
+export default useApiCalling;
