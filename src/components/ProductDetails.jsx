@@ -1,9 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice"
+
 
 function ProductDetails() {
   const { id } = useParams();
   const [productInfo, setProductInfo] = useState(null);
+
+
+  const dispatch = useDispatch();
+
+  function handleCart(productInfo){
+    dispatch(addItem(productInfo))
+  }
+  
 
   useEffect(() => {
     async function fetchProduct() {
@@ -53,7 +64,8 @@ function ProductDetails() {
 
                 <p className="text-gray-700 leading-relaxed">{productInfo.description}</p>
 
-                <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition">
+                {/** add to cart button creation */}
+                <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition" onClick = { ()=> handleCart(productInfo)}>
                 Add to Cart
                 </button>
             </div>

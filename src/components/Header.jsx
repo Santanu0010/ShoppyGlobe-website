@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Header() {
+
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems);
     return (
         <>
             <div className="bg-red-500 text-l font-bold text-white h-8 text-center "  >
@@ -31,6 +35,7 @@ function Header() {
                             <li className="hover:text-blue-600 transition">
                                 <Link to="/contact">Contact Us</Link>
                             </li>
+                            <li>{cartItems.length} cart</li>
                         </ul>
                     </nav>
 
