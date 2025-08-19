@@ -1,12 +1,31 @@
-# React + Vite
+# 🛒 React E-Commerce App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **E-Commerce web application** built with **React, Redux Toolkit, React Router, Tailwind CSS** and API integration from [DummyJSON](https://dummyjson.com/products).  
+The app supports **product listing, product details, cart management, lazy loading, and code splitting**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🏠 **Home Page** – Browse products dynamically from API
+- 🔍 **Product Details Page** – See detailed info of a product
+- 🛒 **Shopping Cart** – Add, remove, and manage item quantity
+- 💰 **Cart Summary** – Update price dynamically with quantity
+- 🧹 **Clear Cart** option
+- ✨ **Proceed to Buy** button (checkout placeholder)
+- ⚡ **Redux Toolkit** for state management
+- 🔀 **React Router v6** for navigation
+- 💤 **React.lazy + Suspense** for lazy loading & code splitting
+- 🎨 **Tailwind CSS** for modern responsive UI
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **React 18**
+- **Redux Toolkit**
+- **React Router v6**
+- **Tailwind CSS**
+- **Vite** (bundler)
+- **DummyJSON API** (for mock products)
+
+
+ ## git clone :  https://github.com/Santanu0010/ShoppyGlobe-website.git

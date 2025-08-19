@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice"
+import { Link } from "react-router-dom";
 
 
 function ProductDetails() {
@@ -34,7 +35,7 @@ function ProductDetails() {
   
         return (
         <>
-            <div className="flex flex-col md:flex-row p-4 m-6 bg-white rounded-2xl shadow-lg gap-6 max-w-5xl ">
+            <div className="flex flex-col md:flex-row p-4 m-6 bg-white rounded-2xl shadow-lg gap-6 justify-center  ">
 
             {/* Product Image */}
             <div className="flex-1 flex justify-center items-center">
@@ -65,9 +66,10 @@ function ProductDetails() {
                 <p className="text-gray-700 leading-relaxed">{productInfo.description}</p>
 
                 {/** add to cart button creation */}
-                <button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition" onClick = { ()=> handleCart(productInfo)}>
+                <Link to ="/cart"><button className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-700 transition" onClick = { ()=> handleCart(productInfo)}>
                 Add to Cart
-                </button>
+                </button></Link>
+
             </div>
             </div>
         </>
